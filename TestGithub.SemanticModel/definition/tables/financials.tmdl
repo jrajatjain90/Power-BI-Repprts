@@ -1,7 +1,12 @@
 table financials
 	lineageTag: 33929df2-5e78-4d26-910c-cbcc655d7f6f
 
-	measure salestoCIty = CALCULATE(MAX(financials[ Sales]))
+	measure salestoCIty =
+			
+			var a =CALCULATE(MAX(financials[ Sales]))
+			var  b=100
+			RETURN
+			DIVIDE(a,b)
 		lineageTag: 7bc4cbf4-6189-442d-8a0b-29565310bce6
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
